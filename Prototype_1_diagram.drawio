@@ -51,10 +51,10 @@
             <mxPoint x="630" y="600" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="yFePq5NevTGuFAqzoBcv-26" value="Yes" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" parent="1" vertex="1">
+        <mxCell id="yFePq5NevTGuFAqzoBcv-26" value="&lt;font style=&quot;color: light-dark(rgb(255, 255, 255), rgb(0, 204, 0));&quot;&gt;Yes&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" parent="1" vertex="1">
           <mxGeometry x="609" y="551" width="50" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="yFePq5NevTGuFAqzoBcv-29" value="No" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" parent="1" vertex="1">
+        <mxCell id="yFePq5NevTGuFAqzoBcv-29" value="&lt;font style=&quot;color: light-dark(rgb(184, 84, 80), rgb(215, 13, 13));&quot;&gt;No&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" parent="1" vertex="1">
           <mxGeometry x="430" y="480" width="40" height="30" as="geometry" />
         </mxCell>
         <mxCell id="yFePq5NevTGuFAqzoBcv-32" value="&lt;span style=&quot;font-size: 16px; text-wrap-mode: nowrap;&quot;&gt;Continuously&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 16px; text-wrap-mode: nowrap;&quot;&gt;&amp;nbsp;&quot;looks&quot;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 16px; text-wrap-mode: nowrap;&quot;&gt;&amp;nbsp;for the signal&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -88,7 +88,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="yFePq5NevTGuFAqzoBcv-37" value="Awaits for the next sender&amp;nbsp;&lt;div&gt;to be registered&amp;nbsp;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" parent="1" vertex="1">
+        <mxCell id="yFePq5NevTGuFAqzoBcv-37" value="&lt;font style=&quot;color: light-dark(rgb(255, 255, 255), rgb(0, 0, 204));&quot;&gt;Awaits for the next sender&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(255, 255, 255), rgb(0, 0, 204));&quot;&gt;to be registered&amp;nbsp;&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" parent="1" vertex="1">
           <mxGeometry x="765" y="480" width="210" height="50" as="geometry" />
         </mxCell>
         <mxCell id="yFePq5NevTGuFAqzoBcv-39" value="&lt;span style=&quot;font-size: 16px; text-wrap-mode: nowrap;&quot;&gt;Continuously&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 16px; text-wrap-mode: nowrap;&quot;&gt;&amp;nbsp;sends&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 16px; text-wrap-mode: nowrap; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;the signal&lt;/span&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -137,10 +137,10 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="yFePq5NevTGuFAqzoBcv-55" value="No" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" parent="1" vertex="1">
+        <mxCell id="yFePq5NevTGuFAqzoBcv-55" value="&lt;font style=&quot;color: light-dark(rgb(184, 84, 80), rgb(215, 13, 13));&quot;&gt;No&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" parent="1" vertex="1">
           <mxGeometry x="650" y="220" width="40" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="yFePq5NevTGuFAqzoBcv-56" value="Yes" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" parent="1" vertex="1">
+        <mxCell id="yFePq5NevTGuFAqzoBcv-56" value="&lt;font style=&quot;color: light-dark(rgb(255, 255, 255), rgb(0, 204, 0));&quot;&gt;Yes&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" parent="1" vertex="1">
           <mxGeometry x="790" y="125" width="50" height="30" as="geometry" />
         </mxCell>
         <mxCell id="yFePq5NevTGuFAqzoBcv-57" value="Is the signal strong enaugh?" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
@@ -152,7 +152,7 @@
             <mxPoint x="690" y="-20" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="yFePq5NevTGuFAqzoBcv-60" value="Yes" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" parent="1" vertex="1">
+        <mxCell id="yFePq5NevTGuFAqzoBcv-60" value="&lt;font style=&quot;color: light-dark(rgb(255, 255, 255), rgb(0, 204, 0));&quot;&gt;Yes&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" parent="1" vertex="1">
           <mxGeometry x="779" y="1" width="50" height="30" as="geometry" />
         </mxCell>
         <mxCell id="yFePq5NevTGuFAqzoBcv-61" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=light-dark(#B85450,#D70D0D);" parent="1" target="yFePq5NevTGuFAqzoBcv-43" edge="1">
@@ -188,10 +188,10 @@
             <mxPoint x="820" y="90" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="yFePq5NevTGuFAqzoBcv-69" value="Start Logic" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" parent="1" vertex="1">
+        <mxCell id="yFePq5NevTGuFAqzoBcv-69" value="&lt;font style=&quot;color: light-dark(rgb(255, 255, 255), rgb(0, 0, 204));&quot;&gt;Start Logic&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" parent="1" vertex="1">
           <mxGeometry x="604" y="-110" width="100" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="yFePq5NevTGuFAqzoBcv-70" value="End Logic" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" parent="1" vertex="1">
+        <mxCell id="yFePq5NevTGuFAqzoBcv-70" value="&lt;font style=&quot;color: light-dark(rgb(255, 255, 255), rgb(0, 0, 204));&quot;&gt;End Logic&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" parent="1" vertex="1">
           <mxGeometry x="525" y="310" width="90" height="30" as="geometry" />
         </mxCell>
         <mxCell id="yFePq5NevTGuFAqzoBcv-71" value="SD-Card" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
