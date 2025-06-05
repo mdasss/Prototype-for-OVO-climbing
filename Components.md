@@ -8,8 +8,8 @@
 
 
 ## Reciver : 
-### Arduino Nano ESP32
-  -
+### Arduino Nano 33 ble -> Has much lower power consumption then the standard esp32
+  - 
   -
   -
   -
