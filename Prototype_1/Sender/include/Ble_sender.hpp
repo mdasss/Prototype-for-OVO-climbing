@@ -15,7 +15,7 @@ class Ble_sender {
         explicit Ble_sender(std::string id);
         void start_advertising();
         void stop_advertising();
-        void get_name();
+        std::string get_name();
 
     private:
         std::string device_ID;

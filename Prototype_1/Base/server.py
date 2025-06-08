@@ -4,8 +4,8 @@ import asyncio
 from bleak import BleakScanner
 
 async def scan_ble():
-    print("Scanning for BLE devices for 10 sec...")
-    devices = await BleakScanner.discover(timeout=10.0)
+    print("Scanning for BLE devices for 13 sec...")
+    devices = await BleakScanner.discover(timeout=13.0)
 
     for device in devices:
         print(f"\n Device: {device.name} | Address: {device.address}")
