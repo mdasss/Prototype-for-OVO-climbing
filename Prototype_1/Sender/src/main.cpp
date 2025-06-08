@@ -13,9 +13,12 @@ void setup() {
     sender1 = new Ble_sender("AA0001");
     //sender2 = new Ble_sender("AA0002");
     sender1->start_advertising();
+
+
 }
 
 void loop() {
-    delay(1000);
-    Serial.println("running");
+   delay(6250);
+   Serial.printf("Still advertising ID=%s \n",
+                  sender1->get_ID().c_str());
 }

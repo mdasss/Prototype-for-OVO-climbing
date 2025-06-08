@@ -53,59 +53,69 @@ bool Ble_reciver::is_valid_sender_id(const std::string &id) const {
 }
 
 void Ble_reciver::scann_and_process() {
-    if (!pBLEScan){
-        Serial.println("pBLEScan is not initialized!"); // println does not take std::string as an argument, but rather a c-style string
+    if (!pBLEScan) {
+        Serial.println("pBLEScan not initialized!");
         return;
     }
-    BLEScanResults found_senders = pBLEScan->start(scan_seconds,false);
 
-    int best_RSSI = rssi_threshold;   // the strongest signal
-    std::string  best_id;
-    std::vector<uint8_t> best_raw_data;
+    // 1) Start the blocking scan
+    BLEScanResults results = pBLEScan->start(scan_seconds, false);
+
+    // 2) Pick the best (strongest) valid sender in one pass
+    int  bestRSSI = INT_MIN;
+    std::string bestID;
+    std::vector<uint8_t> bestRaw;
     bool found = false;
 
-    int count = found_senders.getCount();
-    for (int i = 0; i < count; i++){
-        BLEAdvertisedDevice adv_data = found_senders.getDevice(i);
+    int count = results.getCount();
+    for (int i = 0; i < count; i++) {
+        BLEAdvertisedDevice dev = results.getDevice(i);
 
-        if (!adv_data.haveName()){
+        if (!dev.haveName()) {
+            Serial.println("  • The device has no name");
+            continue;
+        }
+        std::string name = dev.getName();
+        if (!is_valid_sender_id(name)) {
+            Serial.printf("  • The device \"%s\" has invalid prefix\n", name.c_str());
+            continue;
+        }
+        int rssi = dev.getRSSI();
+        if (rssi <= rssi_threshold) {
+            Serial.printf("  • The device is \"%s\" too far (RSSI=%d)\n", name.c_str(), rssi);
+            continue;
+        }
+        if (!dev.haveManufacturerData()) {
+            Serial.printf("  • The device has \"%s\" no manufacturer data\n", name.c_str());
             continue;
         }
 
-        std::string sender_ID = adv_data.getName();
+        // we’ve got a valid candidate — keep the strongest
+        if (!found || rssi > bestRSSI) {
+            found   = true;
+            bestRSSI = rssi;
+            bestID   = name;
 
-        if (!is_valid_sender_id((sender_ID))){
-            continue;
-        }
-
-        int rssi = adv_data.getRSSI();
-        if (rssi <= rssi_threshold){
-            continue;
-        }
-
-        if (!adv_data.haveManufacturerData()){
-            continue;
-        }
-        std::string raw_data = adv_data.getManufacturerData();
-
-        if (rssi > best_RSSI || !found){
-            best_RSSI = rssi;
-            best_id = sender_ID;
-            best_raw_data.assign(reinterpret_cast<const uint8_t*>(raw_data.data()), reinterpret_cast<const uint8_t*>(raw_data.data())+ raw_data.length());
-            found = true;
-        }
-
-        pBLEScan -> clearResults();
-
-        if (found){
-            Serial.printf("The nearest valid sender device with ID=%s | RSSI=%d dBm\n",best_id.c_str(),best_RSSI);
-            handle_incoming_data(best_id,best_raw_data.data(),best_raw_data.size());
-        }else{
-            Serial.println("None valid pointer (over -64 dBm) found this iteration.");
+            std::string raw = dev.getManufacturerData();
+            bestRaw.assign(
+                    reinterpret_cast<const uint8_t*>(raw.data()),
+                    reinterpret_cast<const uint8_t*>(raw.data()) + raw.length()
+            );
         }
     }
-}
 
+    // 3) Clear all results _once_
+    pBLEScan->clearResults();
+
+    // 4) Report exactly one summary line
+    if (found) {
+        Serial.printf("→ Nearest sender: ID=%s  RSSI=%d dBm\n",bestID.c_str(), bestRSSI);
+        handle_incoming_data(bestID, bestRaw.data(), bestRaw.size());
+    }
+    else {
+        Serial.println("→ No valid sender found this cycle.");
+    }
+}
 void  Ble_reciver::stop_scanning() {
     if (pBLEScan){
         pBLEScan->stop();
@@ -123,6 +133,8 @@ void Ble_reciver::handle_incoming_data(const std::string &device_ID, const uint8
 
     std::string payload(reinterpret_cast<const char*>(raw_data),length);
     std::string ascii = get_manufacturer_payload(payload); // ascii = "ID:AA0001 ,S nr.1"
+
+    Serial.printf("ASCII payload: %s\n", ascii.c_str());
 
     size_t pos = ascii.find(",S nr.");
     if (pos != std::string::npos){
