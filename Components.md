@@ -6,7 +6,8 @@
 - Logging of the start and stop data by the local server,
 - The local server holds the information about the number of sender devices. How many of them are active, inactive and which user is currently using a specific sender device. The server has to keep the history of each user i.e which routes they took, how much time they spent at each rute etc,
 - Simple user interface for the local server,
-- If a specific device has activated a receiver for the first time, the local server knows that the sender is on route to the receiver connected to that specific route. After the sender device has activated the second receiver on that route, the same receiver that was activated at the stop, will send the information to the local server about it. The local server will compare the times between the activation of the first receiver and the second one. 
+- If a specific device has activated a receiver for the first time, the local server knows that the sender is on route to the receiver connected to that specific route. After the sender device has activated the second receiver on that route, the same receiver that was activated at the stop, will send the information to the local server about it. The local server will compare the times between the activation of the first receiver and the second one.
+- Change the route that the receiver is connected to. (Might be necessary to move it to the next phase). 
 
 # Components Needed:
 
