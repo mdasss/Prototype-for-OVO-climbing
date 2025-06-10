@@ -1,3 +1,12 @@
+# What should be treated as demo?
+## My assumption:
+- Communication between the sender and receiver,
+- Communication between the receiver and the local server,
+- Selection of the nearest correct sender device by the receiver,
+- Logging of the start and stop data by the local server,
+- The local server holds the information about the number of sender devices. How many of them are active, inactive and which user is currently using a specific sender device. The server has to keep the history of each user i.e which routes they took, how much time they spent at each rute etc,
+- Simple user interface for the local server,
+
 # Components Needed:
 
 ## Base :
@@ -29,3 +38,5 @@
 ## Testing phase : 
 - usb current/voltage tester - to measure how much current the sender and reciver draws over time,
 - 
+
+
