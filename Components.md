@@ -1,5 +1,5 @@
 # What should be treated as demo?
-## My assumption:
+## My assumptions for what is most doable during the demo phase (Can be a bit modified):
 - Communication between the sender and receiver,
 - Communication between the receiver and the local server,
 - Selection of the nearest correct sender device by the receiver,
