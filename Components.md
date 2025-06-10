@@ -5,6 +5,10 @@
   - SD card,
   - Touch screen,
   - Cooling Fan,
+  - Micro HDMI,
+  - SD card adapter -> maybe i can borrow it from the university, ruther buy one, might be necessary to use it const,
+  - Heatsinks for raspberry pis chips,
+  - 
 
 
 ## Reciver : 
