@@ -39,6 +39,6 @@
 
 ## Testing phase : 
 - usb current/voltage tester - to measure how much current the sender and reciver draws over time,
-- 
+- Rfid
 
 
